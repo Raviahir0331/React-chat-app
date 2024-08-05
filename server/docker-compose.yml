@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+    chat_application:
+        container_name: chat_application
+        image: postgres
+        restart: always
+        environment: 
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: root
+            POSTGRES_DB: chat_application
+        volumes: 
+            - ./postgres-data:/var/lib/postgresql/data
+        ports:
+            - "5432:5432"
+
+    pgadmin: 
+
+        image: dpage/pgadmin4
+        restart: always
+        environment:
+             PGADMIN_DEFAULT_EMAIL: rbdangar1213@gmail.com
+             PGADMIN_DEFAULT_PASSWORD: ravi
+        ports:
+             - "8080:80"
+        depends_on:
+            - chat_application

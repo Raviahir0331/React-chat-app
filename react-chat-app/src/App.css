@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+body {
+  background-color: #121212;
+}
+.montserrat{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:500;
+    font-style: normal;
+  }
+  .gallery{
+    z-index: 2;
+  }
+ 
+ 
+  .message {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+    max-width: 60%;
+    word-wrap: break-word;
+  }
+  
+  .message-sender {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    margin-left: auto;
+  }
+  
+  .message-receiver {
+    background-color: #fff;
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  
+  .message-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: calc(100vh - 160px); /* Adjusted to ensure it fits between the top bar and bottom input */
+    overflow-y: auto;
+  }
+  
+  .emoji-picker {
+    position: absolute;
+    bottom: 80px;
+    left: 10px;
+  }
+  
