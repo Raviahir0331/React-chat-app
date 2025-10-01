@@ -24,7 +24,7 @@ jobs:
 
       - name: Build React App
         working-directory: ./react-chat-app
-        run: npm run build
+      - run: CI=false npm run build
 
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@master
